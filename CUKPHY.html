@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central University Physical Society</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fefefe;
+        }
+        header {
+            background-color: #6c445c;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .about, .events, .gallery, .contact {
+            padding: 20px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .event, .gallery-item {
+            margin-bottom: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact form input, .contact form textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 1em;
+        }
+        .contact form input[type="submit"] {
+            background-color: #6c445c;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Central University Physical Society</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section id="about" class="about">
+            <h2 class="section-title">About Us</h2>
+            <p>Welcome to the Central University Physical Society. Our mission is to foster a community of students passionate about physics and its applications. We organize lectures, workshops, and events to enhance the understanding and appreciation of physics among students and faculty.</p>
+        </section>
+
+        <section id="events" class="events">
+            <h2 class="section-title">Events</h2>
+            <div class="event">
+                <h3>Annual Physics Symposium</h3>
+                <p>Date: July 25, 2024</p>
+                <p>Join us for a day of insightful talks and networking with fellow physics enthusiasts.</p>
+            </div>
+            <div class="event">
+                <h3>Quantum Mechanics Workshop</h3>
+                <p>Date: August 10, 2024</p>
+                <p>A hands-on workshop exploring the principles of quantum mechanics.</p>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <h2 class="section-title">Gallery</h2>
+            <div class="gallery-item">
+                <img src="image1.jpg" alt="Event Image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="image2.jpg" alt="Event Image 2">
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="section-title">Contact Us</h2>
+            <form action="https://formspree.io/f/{your-form-id}" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="_replyto" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <input type="submit" value="Send">
+            </form>
+        </section>
+    </div>
+</body>
+</html>
