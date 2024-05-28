@@ -1,147 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Central University Physical Society</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fefefe;
-        }
-        header {
-            background-color: #6c445c;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-        }
-        .banner {
-            width: 100%;
-            height: 300px;
-            background-color: #ccc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        .about, .events, .gallery, .contact {
-            padding: 20px 0;
-        }
-        .section-title {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .event, .gallery-item {
-            margin-bottom: 20px;
-        }
-        .gallery img {
-            width: 100%;
-            height: auto;
-        }
-        .contact form {
-            display: flex;
-            flex-direction: column;
-        }
-        .contact form input, .contact form textarea {
-            margin-bottom: 10px;
-            padding: 10px;
-            font-size: 1em;
-        }
-        .contact form input[type="submit"] {
-            background-color: #6c445c;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-        footer {
-            background-color: #6c445c;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Central University Physical Society</title>
+<style>
+  body { font-family: Arial, sans-serif; }
+  .header { background-color: #004d99; color: white; padding: 10px; text-align: center; }
+  .content { margin: 15px; }
+  .footer { background-color: #004d99; color: white; padding: 10px; text-align: center; }
+</style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Central University Physical Society</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#events">Events</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
-    <div class="container">
-        <div class="banner">
-            <img src="Banner.png" alt="Banner Image">
-        </div>
 
-        <section id="about" class="about">
-            <h2 class="section-title">About Us</h2>
-            <p>Welcome to the Central University Physical Society. Our mission is to foster a community of students passionate about physics and its applications. We organize lectures, workshops, and events to enhance the understanding and appreciation of physics among students and faculty.</p>
-        </section>
+<div class="header">
+  <h1>Welcome to the Central University Physical Society</h1>
+</div>
 
-        <section id="events" class="events">
-            <h2 class="section-title">Events</h2>
-            <div class="event">
-                <h3>Annual Physics Symposium</h3>
-                <p>Date: July 25, 2024</p>
-                <p>Join us for a day of insightful talks and networking with fellow physics enthusiasts.</p>
-            </div>
-            <div class="event">
-                <h3>Quantum Mechanics Workshop</h3>
-                <p>Date: August 10, 2024</p>
-                <p>A hands-on workshop exploring the principles of quantum mechanics.</p>
-            </div>
-        </section>
+<div class="content">
+  <h2>About Us</h2>
+  <p>The Central University Physical Society is dedicated to fostering a community of students and faculty passionate about the physical sciences. We engage in various academic and research activities to promote interest and excellence in physics.</p>
 
-        <section id="gallery" class="gallery">
-            <h2 class="section-title">Gallery</h2>
-            <div class="gallery-item">
-                <img src="images/image1.jpg" alt="Event Image 1">
-            </div>
-            <div class="gallery-item">
-                <img src="images/image2.jpg" alt="Event Image 2">
-            </div>
-        </section>
+  <h2>Upcoming Events</h2>
+  <ul id="events">
+    <!-- Upcoming events will be listed here -->
+  </ul>
 
-        <section id="contact" class="contact">
-            <h2 class="section-title">Contact Us</h2>
-            <form action="https://formspree.io/f/{your-form-id}" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="_replyto" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                <input type="submit" value="Send">
-            </form>
-        </section>
-    </div>
+  <h2>Contact Us</h2>
+  <p>For more information, please reach out to us at <a href="mailto:physics@cukashmir.ac.in">physics@cukashmir.ac.in</a>.</p>
+</div>
 
-    <footer>
-        <p>Site Built and Designed by Mohsin</p>
-    </footer>
+<div class="footer">
+  <p>© 2024 Central University Physical Society</p>
+</div>
+
+<script>
+// Example JavaScript to dynamically add upcoming events
+document.addEventListener('DOMContentLoaded', function() {
+  var events = [
+    'Physics Seminar - Quantum Computing',
+    'Workshop on Astrophysics',
+    'Annual Physics Symposium'
+  ];
+
+  var eventsList = document.getElementById('events');
+  events.forEach(function(event) {
+    var listItem = document.createElement('li');
+    listItem.textContent = event;
+    eventsList.appendChild(listItem);
+  });
+});
+</script>
+
 </body>
 </html>
