@@ -6,49 +6,96 @@
 <title>Central University Physical Society</title>
 <style>
   body { font-family: Arial, sans-serif; }
-  .header { background-color: #004d99; color: white; padding: 10px; text-align: center; }
+  .header, .footer { background-color: #004d99; color: white; padding: 10px; text-align: center; }
+  .logo { height: 250px; width: 250px; }
+  .banner { width: 100%; height: auto; }
   .content { margin: 15px; }
-  .footer { background-color: #004d99; color: white; padding: 10px; text-align: center; }
+  .nav { background-color: #004d99; padding: 10px; }
+  .nav a { color: white; margin: 0 10px; text-decoration: none; }
+  .nav a:hover { text-decoration: underline; }
+  .section { margin-bottom: 20px; }
+  .form { background-color: #f2f2f2; padding: 20px; }
+  .button { background-color: #008CBA; color: white; padding: 15px 20px; border: none; cursor: pointer; }
+  .button:hover { background-color: #005f73; }
+  .footer-text { font-size: 0.8em; }
 </style>
 </head>
 <body>
 
 <div class="header">
-  <h1>Welcome to the Central University Physical Society</h1>
+  <img src="logo-placeholder.png" alt="Central University Physical Society Logo" class="logo">
+  <h1>Central University Physical Society</h1>
+</div>
+
+<div class="nav">
+  <a href="#home">Home</a>
+  <a href="#about">About Us</a>
+  <a href="#events">Events</a>
+  <a href="#membership">Membership</a>
+  <a href="#contact">Contact</a>
 </div>
 
 <div class="content">
-  <h2>About Us</h2>
-  <p>The Central University Physical Society is dedicated to fostering a community of students and faculty passionate about the physical sciences. We engage in various academic and research activities to promote interest and excellence in physics.</p>
+  <img src="banner-placeholder.jpg" alt="Banner Image" class="banner">
 
-  <h2>Upcoming Events</h2>
-  <ul id="events">
-    <!-- Upcoming events will be listed here -->
-  </ul>
+  <div id="home" class="section">
+    <h2>Welcome!</h2>
+    <p>Welcome to the Central University Physical Society. We are dedicated to the pursuit of knowledge in the physical sciences.</p>
+  </div>
 
-  <h2>Contact Us</h2>
-  <p>For more information, please reach out to us at <a href="mailto:physics@cukashmir.ac.in">physics@cukashmir.ac.in</a>.</p>
+  <div id="about" class="section">
+    <h2>About Us</h2>
+    <p>The society is a hub for students and faculty to collaborate on research, discuss ideas, and share their passion for physics.</p>
+  </div>
+
+  <div id="events" class="section">
+    <h2>Upcoming Events</h2>
+    <ul id="events-list">
+      <!-- Upcoming events will be listed here -->
+    </ul>
+  </div>
+
+  <div id="membership" class="section">
+    <h2>Membership</h2>
+    <p>Join us and become a part of a community that values scientific inquiry and intellectual growth.</p>
+  </div>
+
+  <div id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form class="form">
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit" class="button">Submit</button>
+    </form>
+    <p>Email us at <a href="mailto:physics@cukashmir.ac.in">physics@cukashmir.ac.in</a> or follow us on social media.</p>
+  </div>
 </div>
 
 <div class="footer">
   <p>© 2024 Central University Physical Society</p>
+  <p class="footer-text">Site Built and Designed by Feynman's Maverick</p>
 </div>
 
 <script>
-// Example JavaScript to dynamically add upcoming events
+// JavaScript for interactive elements and login area
 document.addEventListener('DOMContentLoaded', function() {
+  // Example: Add upcoming events dynamically
   var events = [
     'Physics Seminar - Quantum Computing',
     'Workshop on Astrophysics',
     'Annual Physics Symposium'
   ];
 
-  var eventsList = document.getElementById('events');
+  var eventsList = document.getElementById('events-list');
   events.forEach(function(event) {
     var listItem = document.createElement('li');
     listItem.textContent = event;
     eventsList.appendChild(listItem);
   });
+
+  // Placeholder for login functionality
+  // Implement login logic here
 });
 </script>
 
